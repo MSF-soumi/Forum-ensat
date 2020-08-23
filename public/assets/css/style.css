@@ -1,0 +1,22 @@
+body{
+    background-image: url("../BackReg.png");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+img{
+    width: 120px;
+    height: 90px;
+    position: absolute;
+    top: 13%;
+    left:26%;
+
+    
+}
+form{
+    width: 330px;
+    height: 316px;
+    border: 6px solid #7095FF ;
+    margin-left: 18%;
+    margin-top: 10%;
+}

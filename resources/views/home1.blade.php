@@ -12,16 +12,37 @@
 
     </head>
     <body>
-        <div id="container">
-            <div id="E1">
-                <img src="assets/ensat.jpg">
-                <h1> WE GO FURTHER</h1>
-                <h3>when we go together.</h3>
-                <button>Join the team</button>
+        @guest
+            <div id="container">
+                <div id="E1">
+                    <img src="assets/ensat.jpg">
+                    <h1> WE GO FURTHER</h1>
+                    <h3>when we go together.</h3>
+                    <button>Join the team</button>
+                </div>
+                <img src="assets/student.png">
             </div>
-            <img src="assets/student.png">
+        @else
+            <nav>
+                <img src="assets/ensat.jpg">
+                <ul>
+                    <li>Profil</li>
+                    <li>Contact</li>
+                    <li>LOG OUT</li>
+                </ul>
+            </nav>
+        @endguest 
+
+        <div id= "dash">
+            <table>
+                <tr><th>DASHBOARD</th></tr>
+                <tr>
+                    <td><a href="#">titre</a></td>
+                    <td>stars </td>
+                </tr>
+            </table>
+
 
         </div>
-        
     </body>
 </html>
