@@ -1,17 +1,27 @@
-body{
+body
+{
     background-image: url("../BackReg.png");
     background-size: 100%;
     background-repeat: no-repeat;
+    margin: 0;
+    height: 100%;
+    
 }
+html 
+{
+   margin: 0px;
+   height: 100%;
+   width: 100%;
+}
+
+
 
 img{
     width: 120px;
     height: 90px;
     position: absolute;
     top: 18%;
-    left:26%;
-
-    
+    left:26%;    
 }
 form{
     width: 330px;

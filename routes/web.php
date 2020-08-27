@@ -32,8 +32,8 @@ Route::get('/dash', function () {
     return view('dashboard');
 });
 
-Route::get('/profil', function () {
-    return view('profil');
+Route::get('/p', function () {
+    return view('profil1');
 });
 
 Auth::routes();

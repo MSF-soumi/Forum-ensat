@@ -1,42 +1,50 @@
-*{
+*
+{
     padding: 0 ;
     margin: 0 ;
 }
 
-#container{
+#container
+{
     display: flex;
     justify-content: space-between;
     height: 100%;
     margin-top: 5%;
-    width: 70%;
+    width: 100%;
     background-image: url("../back.png");
     background-size: 100% 100%;
     background-repeat: no-repeat;
-    margin-left: auto;
-    margin-right: auto;
+    
 }
 
-#E1{
+#E1
+{
     display: flex;
     flex-direction: column;
-    margin-left: 5%;
+     margin: 0 auto ;
+     width: 50%;
 }
 
-#E1 img{
-    width: 40%;
-    height: 40%;
-    margin-left: 0;
+
+#E1 img
+{
+    width: 20%;
+    height: 35%;
+    margin-left: 0px;
+    margin-right: px;
 
 }
-button{
+
+button
+{
     align-self: center;
     display: block;
     cursor: pointer;
     outline: none;
     border: none;
     background-color: #4373FF;
-    width: 45%;
-    height: 15%;
+    width: 20%;
+    height: 10%;
     border-radius: 30px;
     font-size: 1.5vw;
     font-weight: 600;
@@ -45,7 +53,8 @@ button{
 
 
 }
-h3{
+h3
+{
     margin-bottom: 5%;
     font-size: 2vw;
     align-self: center;
@@ -82,4 +91,14 @@ th, td {
   {
       margin-left: 30%;
   }
-  
+  html {
+    margin: 0px;
+    height: 100%;
+    width: 100%;
+ }
+ 
+ body {
+    margin: 0px;
+    min-height: 100%;
+    width: 100%;
+ }
