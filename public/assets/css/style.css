@@ -8,7 +8,7 @@ img{
     width: 120px;
     height: 90px;
     position: absolute;
-    top: 13%;
+    top: 18%;
     left:26%;
 
     
@@ -18,5 +18,13 @@ form{
     height: 316px;
     border: 6px solid #7095FF ;
     margin-left: 18%;
-    margin-top: 10%;
+    margin-top: 5%;
+}
+
+.r
+{
+    font-size: 100px;
+    text-align: right;
+    color: white;
+    transform: rotate(17deg);
 }
