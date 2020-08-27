@@ -64,3 +64,22 @@ h1{
     width: auto;
     height: auto;
 }
+
+table , td , th
+{
+    border: 2px double blue;
+    width: 70%;
+    text-align: center;
+    font-family: cursive;
+    font-size: 2.5vw;
+    
+}
+th, td {
+    padding: 10px;
+  }
+
+  #dash
+  {
+      margin-left: 30%;
+  }
+  
