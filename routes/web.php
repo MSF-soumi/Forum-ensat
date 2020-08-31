@@ -25,12 +25,9 @@ Route::get('/login', function () {
 });
 
 Route::get('/r', function () {
-    return view('register1');
+    return view('register');
 });
 
-Route::get('/dash', function () {
-    return view('dashboard');
-});
 
 Route::get('/p', function () {
     return view('profil1');
@@ -40,3 +37,11 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

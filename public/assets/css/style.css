@@ -1,40 +1,60 @@
 body
 {
-    background-image: url("../BackReg.png");
-    background-size: 100%;
+    margin:0;
+    padding:0;
+    background-image: url("../BackReg.png") ;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     background-repeat: no-repeat;
-    margin: 0;
-    height: 100%;
+
     
 }
-html 
-{
-   margin: 0px;
-   height: 100%;
-   width: 100%;
-}
-
-
 
 img{
-    width: 120px;
-    height: 90px;
+    width:  23%;
+    height: 25%;
     position: absolute;
-    top: 18%;
-    left:26%;    
-}
-form{
-    width: 330px;
-    height: 316px;
-    border: 6px solid #7095FF ;
-    margin-left: 18%;
-    margin-top: 5%;
+    top: 0;
+    left:0;    
 }
 
+form{
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    height: auto;
+    padding-right: 5px;
+    padding-left: 5px;
+    padding-bottom: 2%;
+    padding-top: 10px;
+    border: 6px solid #7095FF ;
+    margin-left: 28%;
+    margin-top: 7%;
+    text-align: center;
+}
+
+@media screen and (max-width: 800px){
+    form{
+        width: 45%;
+        margin-top: 13%;
+    }
+}
+
+@media screen and (max-width: 800px){
+    form{
+        margin-top: 20%;
+    }
+}
 .r
 {
+    position: absolute;
+    top: 20%;
+    left: 70%;
     font-size: 100px;
+    padding:0;
     text-align: right;
-    color: white;
-    transform: rotate(17deg);
+    color: black;
+    transform: rotate(40deg);
+  
 }
