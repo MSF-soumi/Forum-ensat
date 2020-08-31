@@ -53,6 +53,7 @@ button
 
 
 }
+a.boutton:visited, a.boutton:link {color: white;}
 h3
 {
     margin-bottom: 5%;
