@@ -12,11 +12,11 @@ body
 }
 
 img{
-    width:  23%;
+    width:  20%;
     height: 25%;
     position: absolute;
-    top: 0;
-    left:0;    
+    top: 5px;
+    left:5px;    
 }
 
 form{
@@ -46,15 +46,37 @@ form{
         margin-top: 20%;
     }
 }
-.r
+.r1
 {
     position: absolute;
-    top: 20%;
-    left: 70%;
-    font-size: 100px;
+    top: 3%;
+    right: 0;
+    padding-right: 0;
+    font-size: 8vw;
     padding:0;
     text-align: right;
-    color: black;
-    transform: rotate(40deg);
+    color: white;
+    transform-origin: 0 0;
+    transform: rotate(39deg);
   
+}
+
+.r{
+    position: absolute;
+    top: 2%;
+    right: 0;
+    padding-right: 0;
+    font-size: 6vw;
+    padding:0;
+    text-align: right;
+    color: white;
+    transform-origin: 0 0;
+    transform: rotate(39deg);
+}
+
+.remember{
+    display: inline;
+}
+.login *{
+    margin: 5px 0px;
 }
