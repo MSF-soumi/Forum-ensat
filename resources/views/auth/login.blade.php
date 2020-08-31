@@ -37,7 +37,7 @@
                             <input type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
                             <label for="remember">{{ __('Remember Me') }}</label>
                         </div>
-                            <button type="submit" >{{ __('Login') }}</button>
+                            <button class="Bout" type="submit" >{{ __('Login') }}</button>
 
                                 @if (Route::has('password.request'))
                             <a href="{{ route('password.request') }}">{{ __('Forgot Your Password?') }}</a>

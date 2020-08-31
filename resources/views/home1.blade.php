@@ -19,7 +19,7 @@
                     <img src="assets/ensat.jpg">
                     <h1> WE GO FURTHER</h1>
                     <h3>when we go together.</h3>
-                    <button>Join the team</button>
+                <button ><a class="boutton" href="{{ route('register') }}">Join the team</a></button>
                 </div>
                 <img src="assets/student.png">
             </div>

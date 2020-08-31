@@ -80,3 +80,18 @@ form{
 .login *{
     margin: 5px 0px;
 }
+.Bout
+{
+    background-color: rgb(51, 153, 255);
+    border: double;
+    border-radius: 10%;
+    text-align: center;
+    color: white;
+
+    font-size: 200%;
+    width: 50%;
+    height: 100%;
+    margin: 4px 25%;
+    cursor: pointer;
+    
+}
