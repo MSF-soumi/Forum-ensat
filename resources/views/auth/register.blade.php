@@ -70,11 +70,7 @@
 
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
-<<<<<<< HEAD
-                                <button class="Bout" type="submit" class="btn btn-primary">
-=======
                                 <button type="submit" class="Bout">
->>>>>>> ecd6fb7c71a6c1e293121744fc117a761a833d62
                                     {{ __('Register') }}
                                 </button>
                             </div>

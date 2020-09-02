@@ -80,10 +80,7 @@ form{
 .login *{
     margin: 5px 0px;
 }
-<<<<<<< HEAD
-=======
 
->>>>>>> ecd6fb7c71a6c1e293121744fc117a761a833d62
 .Bout
 {
     background-color: rgb(51, 153, 255);
@@ -91,18 +88,10 @@ form{
     border-radius: 10%;
     text-align: center;
     color: white;
-<<<<<<< HEAD
-
-    font-size: 200%;
-    width: 50%;
-    height: 100%;
-    margin: 4px 25%;
-=======
     font-size: 100%;
     width: 60%;
     height: 100%;
     margin: 4px 20%;
->>>>>>> ecd6fb7c71a6c1e293121744fc117a761a833d62
     cursor: pointer;
     
 }
