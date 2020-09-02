@@ -1,23 +1,56 @@
-@extends('layouts.app')
+<!DOCTYPE html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-@section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}</div>
+        <title>FORUM ENSAT</title>
 
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
+        <!-- Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@800&display=swap" rel="stylesheet"> 
+        <link href="assets/css/HomeStyle.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
-                    {{ __('You are logged in!') }}
+    </head>
+    <body>
+        @guest
+            <div id="container">
+                <div id="E1">
+                    <img src="assets/ensat.jpg">
+                    <h1> WE GO FURTHER</h1>
+                    <h3>when we go together.</h3>
+                    <div class="links">
+                        <a  href="{{ route('register') }}">Join the team</a>
+                        <br>
+                        <a  href="{{ route('login') }}">LOG IN</a>
+                    </div>
                 </div>
+                <img src="assets/student.png">
             </div>
+
+        @endguest 
+        
+        </br>
+        
+        <div id= "dash">
+            <table>
+                <tr><th style="font-size: 40px; " >DASHBOARD</th></tr>
+                <tr>
+                    <td><a href="#">titre</a></td>
+                    <td>stars </td>
+                </tr>
+                <tr>
+                    <td><a href="#">titre</a></td>
+                    <td>stars </td>
+                </tr>
+                <tr>
+                    <td><a href="#">titre</a></td>
+                    <td>stars </td>
+                </tr>
+            </table>
+
+
         </div>
-    </div>
-</div>
-@endsection
+    
+    </body>
+</html>
