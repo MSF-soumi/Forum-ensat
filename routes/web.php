@@ -1,3 +1,4 @@
+  
 <?php
 
 use Illuminate\Support\Facades\Route;
@@ -14,17 +15,14 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home1');
+    return view('home');
 });
 
-Route::get('/l', function () {
-    return view('login1');
-});
 Route::get('/login', function () {
     return view('login');
 });
 
-Route::get('/r', function () {
+Route::get('/register', function () {
     return view('register');
 });
 
@@ -32,19 +30,6 @@ Route::get('/r', function () {
 Route::get('/p', function () {
     return view('profil1');
 });
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
 
 Auth::routes();
 
