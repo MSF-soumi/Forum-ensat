@@ -38,3 +38,8 @@ Route::get('/home', 'HomeController@index')->name('home');
 //affichage des posts
 Route::get('/', 'PostController@index')->name('home');
 
+//insertion des posts
+
+Route::get('/p', 'PostController@create')->name('Post.create');
+Route::post('/p', 'PostController@store')->name('Post.store');
+

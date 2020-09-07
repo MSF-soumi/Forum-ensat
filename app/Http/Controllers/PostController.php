@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+use App\Http\Controllers\Auth;
 
 use App\Post;
 use Illuminate\Http\Request;
@@ -28,7 +29,7 @@ class PostController extends Controller
      */
     public function create()
     {
-        //
+        return view('Post');
     }
 
     /**
@@ -39,7 +40,18 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'titre' => 'bail|required|max:255',
+            'contenu' => 'bail|required|max:255'
+        ]);
+        $post = new \App\Post;
+        $user=Auth::user();
+
+        $post->titre= $request->titre;
+        $post->contenu = $request->contenu;
+        $post->ID_U = associate();
+        $post->save();
+        return "C'est bien enregistré !";
     }
 
     /**
