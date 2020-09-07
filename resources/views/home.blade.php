@@ -29,6 +29,27 @@
             </div>
 
         @endguest 
+        @auth
+        <nav class="navbar navbar-default">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="{{ route('home') }}">ENSAT FORUM</a>
+            </div>
+            <div class="collapse navbar-collapse">
+              <ul class="nav navbar-nav">
+                <li><a href="{{ route('home') }}" class="actif">HOME</a></li>
+                <li><a href="{{ route('login') }}">LOGOUT</a></li>
+              </ul>
+              <form class="navbar-form navbar-left pull-right">
+                <input type="text" class="form-group form-control" placeholder="Recherche">
+              </form>
+            </div>
+          </nav>
+          @endauth
         
         </br>
         
@@ -39,7 +60,7 @@
                     <th><button>ADD POST</button></th>
                 </tr>
                 <tr>
-                @foreach($posts as $post)
+                @foreach($posts  as $post)
                     <tr>
                     <td><a href="#">{{ $post->titre }}</a></td>
 

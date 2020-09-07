@@ -18,7 +18,7 @@ class CreatePostsTable extends Migration
             $table->string('titre');
             $table->string('contenu');
             $table->string('dates');
-            $table->bigInteger('ID_U')->unsigned();
+            $table->unsignedBigInteger('ID_U')->unsigned();
             $table->foreign('ID_U')->references('id')->on('users');
             $table->timestamps();
         });

@@ -35,6 +35,4 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-//affichage des posts
-Route::get('/', 'PostController@index')->name('home');
 
