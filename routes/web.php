@@ -28,13 +28,13 @@ Route::get('/register', function () {
 
 
 Route::get('/p', function () {
-    return view('profil1');
+    return view('Post');
 });
 //Authenfication 
 Auth::routes();
 
-<<<<<<< HEAD
 Route::get('/home', 'HomeController@index')->name('home');
-=======
-Route::get('/home', 'HomeController@index')->name('home');
->>>>>>> ecd6fb7c71a6c1e293121744fc117a761a833d62
+
+//affichage des posts
+Route::get('/', 'PostController@index')->name('home');
+

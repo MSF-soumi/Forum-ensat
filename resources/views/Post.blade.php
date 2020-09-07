@@ -35,15 +35,12 @@
         <div id= "dash">
             <table>
                 <tr>
-                    <th style="font-size: 40px; " >DASHBOARD</th>
-                    <th><button>ADD POST</button></th>
-                </tr>
+                    <th style="font-size: 40px; " >DASHBOARD</th></tr>
                 <tr>
                 @foreach($posts as $post)
                     <tr>
                     <td><a href="#">{{ $post->titre }}</a></td>
-
-                    <td>Created by: {{ $post->user->name }}</td>
+                    <td>stars </td>
                     </tr>
                 @endforeach
                
