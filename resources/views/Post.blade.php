@@ -13,41 +13,16 @@
 
     </head>
     <body>
-        @guest
-            <div id="container">
-                <div id="E1">
-                    <img src="assets/ensat.jpg">
-                    <h1> WE GO FURTHER</h1>
-                    <h3>when we go together.</h3>
-                    <div class="links">
-                        <a  href="{{ route('register') }}">Join the team</a>
-                        <br>
-                        <a  href="{{ route('login') }}">LOG IN</a>
-                    </div>
-                </div>
-                <img src="assets/student.png">
-            </div>
-
-        @endguest 
-        
-        </br>
-        
-        <div id= "dash">
-            <table>
-                <tr>
-                    <th style="font-size: 40px; " >DASHBOARD</th></tr>
-                <tr>
-                @foreach($posts as $post)
-                    <tr>
-                    <td><a href="#">{{ $post->titre }}</a></td>
-                    <td>stars </td>
-                    </tr>
-                @endforeach
-               
-            </table>
+      
+          <form action="{{ route('Post.create') }}" method="POST">
+          @csrf
+                        <input type="text" name="titre"  placeholder="Titre de votre poste">
+ 
+                        <textarea  name="contenu" placeholder="Détailler votre question"></textarea>
+                        <button type="submit" >Envoyer !</button>
+                </form>
 
 
-        </div>
     
     </body>
 </html>
