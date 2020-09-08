@@ -18,7 +18,7 @@
                 <div id="E1">
                     <img src="assets/ensat.jpg">
                     <h1> WE GO FURTHER</h1>
-                    <h3>when we go together.</h3>
+                    <h3>when we go together...</h3>
                     <div class="links">
                         <a  href="{{ route('register') }}">Join the team</a>
                         <br>
