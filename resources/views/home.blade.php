@@ -38,16 +38,19 @@
                 <span class="icon-bar"></span>
               </button>
               <a class="navbar-brand" href="{{ route('home') }}">ENSAT FORUM</a>
-            </div>
-            <div class="collapse navbar-collapse">
-              <ul class="nav navbar-nav">
-                <li><a href="{{ route('home') }}" class="actif">HOME</a></li>
-                <li><a href="{{ route('login') }}">LOGOUT</a></li>
-              </ul>
+              <a href="{{ route('home') }}" class="actif">HOME</a>
+              <a  href="{{ route('logout') }}" onclick="event.preventDefault();
+                         document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                                    </a>
+
+              <form id="logout-form" action="{{ route('logout') }}" method="POST" >
+               @csrf </form>
+            </div>           
               <form class="navbar-form navbar-left pull-right">
                 <input type="text" class="form-group form-control" placeholder="Recherche">
               </form>
-            </div>
+            
           </nav>
           @endauth
         
@@ -57,7 +60,9 @@
             <table>
                 <tr>
                     <th style="font-size: 40px; " >DASHBOARD</th>
-                    <th><button>ADD POST</button></th>
+                    @auth
+                    <th><a href="{{url('/p')}}">ADD POST</a></th>
+                    @endauth
                 </tr>
                 <tr>
                 @foreach($posts  as $post)

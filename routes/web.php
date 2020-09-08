@@ -18,6 +18,10 @@ Route::get('/', function () {
     return view('home');
 });
 
+Route::get('/home', function () {
+    return view('home');
+});
+
 Route::get('/login', function () {
     return view('login');
 });
@@ -30,16 +34,18 @@ Route::get('/register', function () {
 Route::get('/p', function () {
     return view('Post');
 });
+
+
 //Authenfication 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
 
 // affichage 
-Route::get('/', 'PostController@index');
-
+Route::get('/', 'PostController@index')->name('home');
+Route::get('/home', 'PostController@index')->name('home');
 //insertion des posts
 
 Route::get('/p', 'PostController@create')->name('Post.create');
+
 Route::post('/p', 'PostController@store')->name('Post.store');
 

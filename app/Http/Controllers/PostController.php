@@ -1,8 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Http\Controllers\Auth;
 
+use App\Providers\RouteServiceProvider;
+use Closure;
+use Illuminate\Support\Facades\Auth;
 use App\Post;
 use Illuminate\Http\Request;
 
@@ -49,9 +51,9 @@ class PostController extends Controller
 
         $post->titre= $request->titre;
         $post->contenu = $request->contenu;
-        $post->ID_U = associate();
+        $post->ID_U = $user->id;
         $post->save();
-        return "C'est bien enregistré !";
+        return redirect(RouteServiceProvider::HOME);;
     }
 
     /**
