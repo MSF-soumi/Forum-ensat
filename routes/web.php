@@ -35,6 +35,8 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+// affichage 
+Route::get('/', 'PostController@index');
 
 //insertion des posts
 
