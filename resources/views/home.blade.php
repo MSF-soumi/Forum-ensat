@@ -53,9 +53,11 @@
               </form>
             </ul>
           </nav>
+         
+
           @endauth
         
-        </br>
+         </br> 
         
         <div id= "dash">
             <table>
@@ -71,7 +73,10 @@
                     <td><a href="#">{{ $post->titre }}</a></td>
 
                     <td>Created by: {{ $post->user->name }}</td>
+                    @auth
+                    <td><a href="{{ route('comment.add') }}">ADD COMMENT</a></td>
                     </tr>
+                    @endauth
                 @endforeach
                
             </table>
