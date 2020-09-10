@@ -70,13 +70,11 @@
                 <tr>
                 @foreach($posts  as $post)
                     <tr>
-                    <td><a href="#">{{ $post->titre }}</a></td>
+                    <td><a href="/p/{{$post->ID_P}}">{{ $post->titre }}</a></td>
 
                     <td>Created by: {{ $post->user->name }}</td>
-                    @auth
-                    <td><a href="{{ route('comment.add') }}">ADD COMMENT</a></td>
                     </tr>
-                    @endauth
+
                 @endforeach
                
             </table>
