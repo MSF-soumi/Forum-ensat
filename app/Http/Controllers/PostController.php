@@ -46,13 +46,13 @@ class PostController extends Controller
             'contenu' => 'bail|required|max:255'
         ]);
         $post = new \App\Post;
-        $user=Auth::user();
+        $user=\Auth::id();
 
         $post->titre= $request->titre;
         $post->contenu = $request->contenu;
-        $post->ID_U = $user->id;
+        $post->ID_U = $user;
         $post->save();
-        return redirect(RouteServiceProvider::HOME);;
+        return redirect(RouteServiceProvider::HOME);
     }
 
     /**
