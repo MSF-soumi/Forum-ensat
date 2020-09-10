@@ -18,7 +18,7 @@
                 <div id="E1">
                     <img src="assets/ensat.jpg">
                     <h1> WE GO FURTHER</h1>
-                    <h3>when we go together.</h3>
+                    <h3>when we go together...</h3>
                     <div class="links">
                         <a  href="{{ route('register') }}">Join the team</a>
                         <br>
@@ -32,29 +32,32 @@
         @auth
         <nav class="navbar navbar-default">
             <div class="navbar-header">
-              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-              </button>
-              <a class="navbar-brand" href="{{ route('home') }}">ENSAT FORUM</a>
-              <a href="{{ route('home') }}" class="actif">HOME</a>
-              <a  href="{{ route('logout') }}" onclick="event.preventDefault();
+              
+              <ul>
+              <li><a class="navbar-brand" href="{{ route('home') }}">ENSAT FORUM</a></li>
+              <li><a href="{{ route('home') }}" class="actif">HOME</a></li>
+              <li><a  href="{{ route('logout') }}" onclick="event.preventDefault();
                          document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
-                                    </a>
+                                    </a></li>
 
               <form id="logout-form" action="{{ route('logout') }}" method="POST" >
                @csrf </form>
             </div>           
-              <form class="navbar-form navbar-left pull-right">
-                <input type="text" class="form-group form-control" placeholder="Recherche">
+              <form class="navbar-form navbar-right pull-right">
+                
+                <li>
+                    <img src="assets/search.jpg">
+                    <input type="text" class="form-group form-control" placeholder="Search">
+                </li>
               </form>
-            
+            </ul>
           </nav>
+         
+
           @endauth
         
-        </br>
+         </br> 
         
         <div id= "dash">
             <table>
@@ -70,7 +73,10 @@
                     <td><a href="#">{{ $post->titre }}</a></td>
 
                     <td>Created by: {{ $post->user->name }}</td>
+                    @auth
+                    <td><a href="{{ route('comment.add') }}">ADD COMMENT</a></td>
                     </tr>
+                    @endauth
                 @endforeach
                
             </table>

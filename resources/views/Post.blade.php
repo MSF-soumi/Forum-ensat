@@ -22,7 +22,7 @@
                         <input type="text" name="titre"  placeholder="Titre de votre poste">
  
                         <textarea  name="contenu" placeholder="Détailler votre question"></textarea>
-                        <button type="submit" >Envoyer !</button>
+                        <button type="submit" class="Bout">Envoyer !</button>
                 </form>
 
 

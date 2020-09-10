@@ -49,3 +49,9 @@ Route::get('/p', 'PostController@create')->name('Post.create');
 
 Route::post('/p', 'PostController@store')->name('Post.store');
 
+
+//insert des commentaire 
+
+
+Route::get('/comment/store', 'CommentController@store')->name('comment.add');
+Route::post('/reply/store', 'CommentController@replyStore')->name('reply.add');

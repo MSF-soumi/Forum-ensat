@@ -1,12 +1,11 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use App\Providers\RouteServiceProvider;
 use Closure;
 use Illuminate\Support\Facades\Auth;
-use App\Post;
-use Illuminate\Http\Request;
+use App\Post;	
+use Illuminate\Http\Request;	
 
 class PostController extends Controller
 {
@@ -33,7 +32,7 @@ class PostController extends Controller
     {
         return view('Post');
     }
-
+    
     /**
      * Store a newly created resource in storage.
      *
