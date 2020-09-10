@@ -14,8 +14,11 @@
     </head>
     <body>
     <div class="r1">Post</div>
+    
           <form action="{{ route('Post.create') }}" method="POST">
           @csrf
+                        <h1>Add Your Post!</h1>
+                        
                         <input type="text" name="titre"  placeholder="Titre de votre poste">
  
                         <textarea  name="contenu" placeholder="Détailler votre question"></textarea>
