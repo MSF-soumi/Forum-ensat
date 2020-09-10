@@ -36,6 +36,9 @@ Route::get('/p', function () {
 });
 
 
+
+Route::get('/p/{post}', 'PostController@show');
+
 //Authenfication 
 Auth::routes();
 
