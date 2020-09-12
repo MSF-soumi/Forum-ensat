@@ -5,18 +5,19 @@
              git remote add P https://github.com/MSF-soumi/Forum-ensat.git </br>
              git clone https://github.com/MSF-soumi/Forum-ensat.git </br>
 <h3>Etape(1) :</h3> <h4>Résolution des problémes aprés clonnage </h4>
-      #Tout d'abord déplacez-vous dans le projet cloné en local et executez la commande suivante : </br>
+      #Tout d'abord déplacez-vous dans le projet clonné en local et executez la commande suivante : </br>
             composer upgrade --no-scripts  </br>
-       Remarque : cette commande peut prendre quelques minutes (génération des fichier manquants) </br>
+       Remarque : cette commande peut prendre quelques minutes (génération des fichiers manquants) </br>
       #puis créez un fichier s'appel .env et copier le contenu d'un fichier déja existant s'appelle .env.example dans .env </br>
       #executez la commande :</br>
            php artisan key:generate </br>
        (générer un nouveau clé dans .env)   </br>              
-<h3>Etape(2) :</h3><h4>Créeation et remplissage de la base de donées </h4> 
-       #Créez une base de donées local sur PhpMyadmin ou heidisql sous le nom de 'ensat' </br>
+<h3>Etape(2) :</h3><h4>Créeation et remplissage de la base de données </h4> 
+       #midifier le champs : 'DB_DATABASE=ensat' dans le fichier .env </br>
+       #Créez une base de données locale sur PhpMyadmin ou heidisql sous le nom de 'ensat' </br>
        #Executez la commande : </br>
             php artisan migrate  </br>
-             (pour faire migrer les tables vers votre base de données local) </br>
+             (pour faire migrer les tables vers votre base de données locale) </br>
        #Executez la commande : </br>
            composer dump-autoload </br>
        #puis la commande : </br>
