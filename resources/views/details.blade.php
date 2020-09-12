@@ -37,13 +37,24 @@
                     </form> 
                     @endauth
 
+                    <div id="list_comment" >
+                        
+                        <h5> The list of comments  : </h5>
+                        
                     @foreach($post->comments  as $comment)
-                        <p>{{ $comment->body }}</p>
+                     <table>
+                         <tr>
+                             <td ><b>Comment :</b> </td>
+                             <td><b>Commented by:</b></td>
+                         </tr>
+                         <tr>
+                        <td>{{ $comment->body }}</td>
 
-                        <p>Comment by: {{ $comment->user->name }}</p>
-
+                        <td> {{ $comment->user->name }}</td>
+                         </tr>
+                    </table>
                     @endforeach
-                    
+                </di>
 
                     
                     </div>
