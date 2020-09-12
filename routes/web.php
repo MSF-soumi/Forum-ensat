@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// General App Routing
 Route::get('/', function () {
     return view('home');
 });
@@ -37,8 +38,6 @@ Route::get('/p', function () {
 
 
 
-Route::get('/p/{post}', 'PostController@show');
-
 //Authenfication 
 Auth::routes();
 
@@ -46,15 +45,20 @@ Auth::routes();
 // affichage 
 Route::get('/', 'PostController@index')->name('home');
 Route::get('/home', 'PostController@index')->name('home');
+
 //insertion des posts
 
 Route::get('/p', 'PostController@create')->name('Post.create');
 
 Route::post('/p', 'PostController@store')->name('Post.store');
 
+//afficher les details d'un post et ses commentaires
+
+Route::get('/p/{post}', 'PostController@show');
+
+
 
 //insert des commentaire 
 
 
-Route::get('/comment/store', 'CommentController@store')->name('comment.add');
-Route::post('/reply/store', 'CommentController@replyStore')->name('reply.add');
+Route::post('/p/{post}/comments', 'CommentController@store');

@@ -5,7 +5,8 @@ use App\Providers\RouteServiceProvider;
 use Closure;
 use Illuminate\Support\Facades\Auth;
 use App\Post;	
-use Illuminate\Http\Request;	
+use Illuminate\Http\Request;
+	
 
 class PostController extends Controller
 {
@@ -46,7 +47,7 @@ class PostController extends Controller
             'contenu' => 'bail|required|max:255'
         ]);
         $post = new \App\Post;
-        $user=\Auth::id();
+        $user=Auth::id();
 
         $post->titre= $request->titre;
         $post->contenu = $request->contenu;
@@ -64,6 +65,8 @@ class PostController extends Controller
     public function show($id)
     {
         $post=Post::find($id);
+        $user=Auth::id();
+        
         return view('details',['post'=> $post]);
     }
 

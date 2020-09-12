@@ -11,11 +11,10 @@ class Post extends Model
     public function user()
          {
             return $this->belongsTo('App\User', 'ID_U', 'id');
-            return $this->belongsTo(Comment::class);
-         }
-    
+      
+    }
 
-     
+    
      protected $fillable = [
         'titre','contenu'
          ];
@@ -26,10 +25,16 @@ class Post extends Model
          
      
          
+                  /**
+          * One to Many relation
+         *
+         * @return \Illuminate\Database\Eloquent\Relations\HasMany
+         */
          public function comments()
          {
-            return $this->morphMany(Comment::class, 'commentable')->whereNull('parent_id');
+            return $this->hasMany(Comment::class,'post_id');
          }
     
+
 
 }
