@@ -15,15 +15,7 @@
     <body>
     <div class="r1">Post</div>
     
-          {{-- <form action="{{ route('Post.create') }}" method="POST">
-          @csrf
-                        <h1 >Add Your Post!</h1>
-                        
-                        <input type="text" name="titre"  placeholder="Titre de votre poste">
- 
-                        <textarea  name="contenu" placeholder="Détailler votre question"></textarea>
-                        <button type="submit" class="Bout">Envoyer !</button>
-                </form> --}}
+
 
 
 <form action="{{ route('Post.create') }}" method="POST">

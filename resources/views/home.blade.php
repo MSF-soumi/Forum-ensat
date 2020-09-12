@@ -30,31 +30,25 @@
 
         @endguest 
         @auth
-        <nav class="navbar navbar-default">
-            <div class="navbar-header">
-              
-              <ul>
-              <li><a class="navbar-brand" href="{{ route('home') }}">ENSAT FORUM</a></li>
-              <li><a href="{{ route('home') }}" class="actif">HOME</a></li>
-              <li><a  href="{{ route('logout') }}" onclick="event.preventDefault();
+        <div class="nav">
+              <div id="left">
+             <img src="assets/ensat.jpg">
+              <a class="navbar-brand" href="{{ route('home') }}">ENSAT FORUM</a>
+              <a href="{{ route('home') }}" class="actif">HOME</a>
+              <a  href="{{ route('logout') }}" onclick="event.preventDefault();
                          document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
-                                    </a></li>
+                                    </a>
 
               <form id="logout-form" action="{{ route('logout') }}" method="POST" >
-               @csrf </form>
-            </div>           
-              <form class="navbar-form navbar-right pull-right">
-                
-                <li>
-                    <img src="assets/search.jpg">
+               @csrf </form> 
+                </div>
+              <div id= "right">
+              
+                    <img src="assets/search.jpg" width="15%">
                     <input type="text" class="form-group form-control" placeholder="Search">
-                </li>
-              </form>
-            </ul>
-          </nav>
-         
-
+                </div>
+            </div>
           @endauth
         
          </br> 
@@ -67,7 +61,7 @@
                     <th><a href="{{url('/p')}}">ADD POST</a></th>
                     @endauth
                 </tr>
-                <tr>
+                
                 @foreach($posts  as $post)
                     <tr>
                     <td><a href="/p/{{$post->ID_P}}">{{ $post->titre }}</a></td>

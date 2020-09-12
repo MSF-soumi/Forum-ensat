@@ -14,32 +14,39 @@
     </head>
     <body>
     <div class="r1">Posts</div>
-
                     <a href="{{ route('home') }}" class="actif">HOME</a>
-                    <h1>{{ $post->titre }}</h1>
-                    <p>{{ $post->contenu }}</p>
+                    @auth
+                    <a href="{{url('/p')}}">ADD POST</a>
+                    @endauth
+                    <br><br>
+                    <div class="post">
+                        <h1>{{ $post->titre }}</h1>
+                        <p>{{ $post->contenu }}</p>
 
-                    <div>Created by: {{ $post->user->name }}</div> 
+                        <div>Created by: {{ $post->user->name }}</div> 
+                    </div>
+                    
 
-                    <div>
+                    <div class="comments">
+                    @auth
+                    <form action="/p/{{$post->ID_P}}/comments" method="POST" id="comments">
+                        @csrf
+                                    <h5>Leave a comment</h5>
+                                    <textarea  class="form-control " name="body" placeholder="Write your comment here" row="10"></textarea>
+                                    <button type="submit" class="Bout">Envoyer !</button>
+                    </form> 
+                    @endauth
+
                     @foreach($post->comments  as $comment)
                         <p>{{ $comment->body }}</p>
 
                         <p>Comment by: {{ $comment->user->name }}</p>
 
                     @endforeach
-                    </div>
-
-                    @auth
-                    <form action="/p/{{$post->ID_P}}/comments" method="POST">
-                        @csrf
-                                    <h5>Leave a comment</h5>
-                                    <textarea  name="body" placeholder="Write your comment here" row="10"></textarea>
-                                    <button type="submit" class="Bout">Envoyer !</button>
-                    </form> 
                     
-                    <a href="{{url('/p')}}">ADD POST</a>
-                    @endauth
+
+                    
+                    </div>
 
 
 
